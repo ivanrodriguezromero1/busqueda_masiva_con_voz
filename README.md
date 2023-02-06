@@ -3,17 +3,18 @@ El portal web desarrollado tiene la capacidad de realizar una búsqueda en conju
 
 Para la carga de la base de datos, puede utilizar el siguiente comando:
 
-go run Indexer\indexer.go <nombre de la carpeta que contiene la base de datos>
+<b> - go run Indexer\indexer.go (nombre de la carpeta que contiene la base de datos)</b>
   
 En el ejemplo:
   
-go run Indexer\indexer.go enron_mail_20110402
+<b> - go run Indexer\indexer.go enron_mail_20110402</b>
   
 Para levantar la interfaz gráfica, puede utilizar el siguiente comando:
 
-go run mamuro.go -port <número del puerto>
+<b> - go run mamuro.go -port (número del puerto)</b>
 
 En el ejemplo:
-go run mamuro.go -port 3000
+
+<b> - go run mamuro.go -port 3000</b>
 
 ![mamuroEmail](https://user-images.githubusercontent.com/100105456/216748743-c71dfdfa-c0cf-4b72-a69c-5b82014b6d5b.png)
