@@ -13,7 +13,7 @@ var staticDir string
 var serverPort string
 
 func main() {
-	staticDir := "mamuro/dist"
+	staticDir := "dist"
 	router := chi.NewRouter()
 	router.Get("/", func(resp http.ResponseWriter, req *http.Request) {
 		http.ServeFile(resp, req, staticDir+"/index.html")
