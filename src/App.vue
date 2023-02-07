@@ -11,11 +11,11 @@ import Contenido from './components/Contenido.vue'
     <div class="left-0 top-[10%] w-full h-[10%] fixed header">
       <Buscador @Items="handleBuscador" />
     </div>
-  <div class="fixed left-[1%] top-[20%] w-[98%] h-[70%] grid grid-cols-12 gap-2 bg-zinc-50" >
-    <div class="overflow-y-scroll col-span-8 rounded-lg border border-gray-500 bg-gray-200 p-8 sm:col-span-8">
+  <div class="fixed left-[1%] top-[20%] w-[98%] h-[70%] rounded-lg grid grid-cols-12 gap-2" >
+    <div class=" col-span-8 rounded-lg border border-gray-500 p-2 sm:col-span-8  bg-gray-200">
       <Tabla v-bind:items="Items" @Msg="handleTabla"/>
     </div>
-    <div class="overflow-y-scroll col-span-4 rounded-lg border border-gray-500 bg-gray-100 p-8 sm:col-span-4">
+    <div class="overflow-y-scroll col-span-4 rounded-lg border border-gray-500 bg-gray-100 p-6 sm:col-span-4">
       <Contenido v-bind:msg="Msg" />
     </div>
   </div>
