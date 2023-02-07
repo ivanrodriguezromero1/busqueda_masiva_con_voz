@@ -15,15 +15,9 @@ export default {
   },
     mounted() {
     const input = document.querySelector('input');
-    // const envio = 
     input.addEventListener('input', 
     async (e)=>{this.envio(e.target.value)}
     );
-    // console.log(this.items[0]._source)
-    // document.getElementsByClassName('vista')[0]
-    //     .addEventListener('click', function (event) {
-            
-    //     });
   },
   methods: {
     async envio(texto){
