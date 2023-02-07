@@ -35,6 +35,7 @@ export default {
   methods: {
     handleBuscador (value) {
       this.Items = value
+      this.Msg = ""
     },
     handleTabla (value) {
       this.Msg = value

@@ -43,9 +43,9 @@ export default {
           'content-type':'application/json'
           } 
         });
-    this.items = res.data.hits.hits  
+    this.items = res.data.hits.hits
     this.$emit('Items', this.items)
-    // }
+
     },
     hablando(){
         const  recognition = new (window.SpeechRecognition || window.webkitSpeechRecognition || window.mozSpeechRecognition || window.msSpeechRecognition)();

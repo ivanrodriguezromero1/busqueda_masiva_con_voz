@@ -7,10 +7,10 @@ defineProps({
 </script> 
 <template>
   <div class="overflow-x-auto overflow-y-scroll"> 
-      <div class="items-center justify-center bg-white font-sans ">
+      <div class="items-center justify-center bg-zinc-50 font-sans ">
           <div>
-              <div class="h-[450px] bg-white shadow-md rounded ">
-                  <table class="bg-white min-w-max w-full table-auto">
+              <div class="h-[450px] bg-zinc-50 shadow-md rounded ">
+                  <table class="bg-zinc-50 min-w-max w-full table-auto">
                       <thead>
                           <tr class="bg-gray-500 shadow-md rounded text-gray-100 uppercase text-sm leading-normal">
                               <th class="text-left  py-1 px-2">Subject</th>
