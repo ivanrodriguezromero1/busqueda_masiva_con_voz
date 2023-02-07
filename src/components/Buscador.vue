@@ -1,7 +1,10 @@
 <template>
     <div>
-        <input type="text" class=" my-4 w-2/4 bg-gray-50 border border-gray-300 text-gray-900 text-base rounded-lg focus:ring-blue-500 focus:border-blue-500 p-3 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Buscar" required>
-        <button id="voz" class="cursor-pointer bg-red-500 ml-2  h-10 rounded-full border-2 border-neutral-500 hover:border-neutral-700" type="button"  @click="hablando"></button>
+      <div class="absolute left-2 flex items-center pointer-events-none">
+            <svg aria-hidden="true" class="my-6 w-6 h-6 text-gray-500 dark:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+        </div>
+        <input type="text" class="absolute left-10 my-3 w-[calc(100%_-_54px)] bg-gray-50 border border-gray-300 text-gray-900 text-base rounded-lg focus:ring-blue-500 focus:border-blue-500 p-3 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Buscar" required>
+        <button id="voz" class="absolute right-5 my-4 h-10 cursor-pointer bg-red-500 ml-2 rounded-full border-2 border-neutral-500 hover:border-neutral-700" type="button"  @click="hablando"></button>
     </div>
 </template>
 <script>
