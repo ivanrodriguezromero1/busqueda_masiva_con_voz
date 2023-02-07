@@ -19,8 +19,9 @@ defineProps({
                               <th class="text-center py-1 px-2"></th>
                           </tr>
                       </thead>
-                      <tbody class="text-gray-600 text-xs font-light">
-                        <tr v-for="item in items" class="border-b border-gray-200 hover:bg-gray-100">
+                      <tbody class="cursor-pointer text-gray-600 text-xs font-light">
+                        <tr v-for="item in items" @click="mostrar(item._source.Content)" 
+                            class="border-b border-gray-200 hover:bg-gray-100">
                               <td class="text-left py-1 px-2">
                                   <div class="flex items-center">
                                       <span class="font-medium">{{ item._source.Subject }}</span>
@@ -36,7 +37,7 @@ defineProps({
                                       <span class="font-medium">{{ item._source.To }}</span>
                                   </div>
                               </td>
-                              <td class="text-left py-1 px-2" @click="mostrar(item._source.Content)">
+                              <!-- <td class="text-left py-1 px-2" @click="mostrar(item._source.Content)">
                                   <div class="flex item-center justify-center">
                                       <div class="w-4 mr-2 cursor-pointer transform hover:text-purple-500 hover:scale-110">
                                           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -45,7 +46,7 @@ defineProps({
                                           </svg> 
                                       </div> 
                                   </div>
-                              </td>
+                              </td> -->
                           </tr>
                       </tbody>
                   </table>
