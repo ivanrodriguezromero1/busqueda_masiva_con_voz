@@ -10,12 +10,12 @@ import Paginacion from './components/Paginacion.vue';
       <Titulo/>
     </div>
     <div class="left-0 top-[100px] w-full h-[10%] fixed header">
-      <Buscador @Items="handleBuscador" />
+      <Buscador v-bind:max_num="Max_num" @Items="handleBuscador" />
     </div>
-  <div class="fixed left-[1%] top-[178px] w-[98%] h-[70%] rounded-lg grid grid-cols-12 gap-2" >
+  <div class="fixed left-[1%] top-[178px] w-[98%] h-[65%] rounded-lg grid grid-cols-12 gap-2" >
     <div class=" col-span-8 rounded-lg border border-gray-500 p-2 sm:col-span-8  bg-gray-200">
       <Tabla v-bind:items="Items" @Msg="handleTabla"/>
-      <Paginacion />
+      <Paginacion @Max_num="handleMaxNum"/>
     </div>
     <div class="overflow-y-scroll col-span-4 rounded-lg border border-gray-500 bg-gray-100 p-6 sm:col-span-4">
       <Contenido v-bind:msg="Msg" />
@@ -30,14 +30,18 @@ export default {
     name: "App",
     data() {
         return {
-            Msg: "",
-            Items: []
+          Max_num: "",
+          Items: [],
+          Msg: "" 
         };
     },
     methods: {
         handleBuscador(value) {
             this.Items = value;
             this.Msg = "";
+        },
+        handleMaxNum(value){
+            this.Max_num = value;
         },
         handleTabla(value) {
             this.Msg = value;

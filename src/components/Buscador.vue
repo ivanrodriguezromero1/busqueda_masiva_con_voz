@@ -7,8 +7,12 @@
         <button id="voz" class="absolute right-5 my-4 h-10 cursor-pointer bg-red-500 ml-2 rounded-full border-2 border-neutral-500 hover:border-neutral-700" type="button"  @click="hablando"></button>
     </div>
 </template>
+<script setup>
+defineProps({
+    max_num:"",
+  })
+</script>
 <script>
-
 export default {
   name: "Buscador",
   data() {
@@ -16,7 +20,7 @@ export default {
       items: []
     };
   },
-    mounted() {
+  mounted() {
     const input = document.querySelector('input');
     input.addEventListener('input', 
     async (e)=>{this.envio(e.target.value)}
@@ -34,8 +38,8 @@ export default {
             end_time: '2023-12-02T15:28:31.894Z'
           },
           from: 0,
-          max_results: 20,
-          _source: []
+          max_results: parseInt(this.max_num),
+          _source: ["Subject","From","To","Content"]
         },
         {
           auth: {
