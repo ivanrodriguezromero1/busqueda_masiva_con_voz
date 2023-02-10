@@ -8,7 +8,7 @@
     </div>
 </template>
 <script setup>
-defineProps({
+  defineProps({
     max_num:"",
   })
 </script>
@@ -17,7 +17,7 @@ export default {
   name: "Buscador",
   data() {
     return {
-      items: []
+      itemsTotales: []
     };
   },
   mounted() {
@@ -28,7 +28,7 @@ export default {
   },
   methods: {
     async envio(texto){
-        const res = await this.axios.post("http://localhost:4080/api/enron_mail_20110402/_search", 
+      const res = await this.axios.post("http://localhost:4080/api/enron_mail_20110402/_search", 
         {
           search_type: 'match',
           query:
@@ -49,10 +49,9 @@ export default {
           headers: {
           'content-type':'application/json'
           } 
-        });
-    this.items = res.data.hits.hits
-    this.$emit('Items', this.items)
-
+      });
+      this.itemsTotales = res.data.hits.hits
+      this.$emit('ItemsTotales', this.itemsTotales)
     },
     hablando(){
         const  recognition = new (window.SpeechRecognition || window.webkitSpeechRecognition || window.mozSpeechRecognition || window.msSpeechRecognition)();
@@ -67,7 +66,6 @@ export default {
         };
         recognition.start();
       }       
-    }, 
+    }
   }
-
 </script>
